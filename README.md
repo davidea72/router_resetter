@@ -94,6 +94,7 @@ cicle_rele() , to cicle te rele on and off , change HIGH to LOW if you want your
 |firstDelay                  |      5 minutes  | LED ON STEADY              |
 |wifiTimeWaitMinute          |  max 5 minutes  | LED BLINK 0.5 Sec          |
 |minuteBetweenCheck          |  every 5 minute | LED BLINK 0.1 0.1 0.4 0.4  |
+|during ping check           |                 | LED OFF                    |
 |cicle_Rele                  |     10 Sec      | LED BLINK 0.1 Sec          |
 
 

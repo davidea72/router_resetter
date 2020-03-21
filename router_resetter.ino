@@ -82,12 +82,12 @@
  * 
  * 
  * power on
- * firstDelay         5 minute                            LED ON STEADY
- * wifiTimeWaitMinute 5 minute                            LED BLINK 0.5 Sec
+ * firstDelay                  5 minute                            LED ON STEADY
+ * wifiTimeWaitMinute          5 minute                            LED BLINK 0.5 Sec
  * minuteBetweenCheck          5 minute                            LED BLINK 0.1 0.1 0.4 0.4
  * if 3 minuteBetweenCheck fails              15 minute
- * during ping check                                      LED OFF
- * cicle_Rele         10 Sec                              LED BLINK 0.1 Sec
+ * during ping check                                               LED OFF
+ * cicle_Rele         10 Sec                                       LED BLINK 0.1 Sec
  * 
  * test no wifi signal with 1 min delay         WORK!!!!!
  * 
@@ -145,10 +145,10 @@ int eslapedCheck=0;      //count the second during the delay check
 
 void setup() {
   
-  pinMode(LED, OUTPUT);     // Initialize the GPIO5 pin as an output
-  pinMode(RELE, OUTPUT);     // Initialize the GPIO4 pin as an output
+  pinMode(LED, OUTPUT);     // Initialize the GPIO2 pin as an output
+  pinMode(RELE, OUTPUT);     // Initialize the GPIO0 pin as an output
   digitalWrite(RELE, HIGH);   // Turn RELE OFF (Note that LOW or HIGH is the voltage level
-    // but actually the Relay is on; this is because
+    // but actually the Relay is OFF; this is because
     // it is acive low on the ESP-01)
   digitalWrite(LED, LOW);
 
@@ -202,7 +202,7 @@ while(vpnFails < vpnFailsMax and googleFails < googleFailsMax){
   }
 }     
 #ifdef DEBUG
-Serial.println("Switching relay 1 OFF for 10 seconds flashing led every 100 ms to reboot router and resetting googleFails to zero");
+Serial.println("Switching relay OFF for 10 seconds flashing led every 100 ms to reboot router and resetting counter to zero");
 #endif
 cicle_rele();
 
@@ -231,7 +231,7 @@ void setup_wifi() {
 
   WiFi.begin(ssid, password);
 
-////////////////////////////////////////////////////////////////////////////////////////////
+
   while (WiFi.status() != WL_CONNECTED) {
      
      if(eslapedWifiWait  < wifiTimeWaitMinute*60) {
