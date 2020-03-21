@@ -9,6 +9,15 @@ in this project based on the code from **sparkydave**
 
 i've used this [rele board from aliexpress](https://it.aliexpress.com/item/32890526507.html)
 
+
+
+![wifi module1](https://github.com/davidea72/router_resetter/blob/master/ESP8266_ESP-01S_5V_WIFI_RELE_MODULE.jpg "wifi module")
+
+![wifi module connection](https://github.com/davidea72/router_resetter/blob/master/ESP8266_ESP-01S_5V_WIFI_RELE_MODULE_CONNECTION.jpg "wifi module connection" )
+
+![wifi module dimension](https://github.com/davidea72/router_resetter/blob/master/ESP8266_ESP-01S_5V_WIFI_RELE_MODULE_DIMENSION.jpg "wifi module dimension")
+
+
 the board use the GPIO 0 to activate the rele
 
 the led on the board is ON when the rele is energized
